@@ -71,23 +71,34 @@ const EvenVowel = () => {
       if (question.number % 2 === 0 && userAnswer === true) {
         // if the number is even and the user answered true
         // console.log("Jawaban benar, ini genap");
-        wrapperNotif.current.classList.remove("evenvowel__wrapper_false");
+
         wrapperNotif.current.classList.add("evenvowel__wrapper_true");
+        setTimeout(() => {
+          wrapperNotif.current.classList.remove("evenvowel__wrapper_true");
+        }, 700);
       } else if (question.number % 2 === 0 && userAnswer === false) {
         // if the number is even and the user answered false
         // console.log("Jawaban salah, ini harusnya genap");
-        wrapperNotif.current.classList.remove("evenvowel__wrapper_true");
         wrapperNotif.current.classList.add("evenvowel__wrapper_false");
+        setTimeout(() => {
+          wrapperNotif.current.classList.remove("evenvowel__wrapper_false");
+        }, 700);
       } else if (question.number % 2 !== 0 && userAnswer === true) {
         // if the number is odd and the user answered true
         // console.log("Jawaban salah, ini bukan angka genap");
-        wrapperNotif.current.classList.remove("evenvowel__wrapper_true");
+
         wrapperNotif.current.classList.add("evenvowel__wrapper_false");
+        setTimeout(() => {
+          wrapperNotif.current.classList.remove("evenvowel__wrapper_false");
+        }, 700);
       } else if (question.number % 2 !== 0 && userAnswer === false) {
         // if the number is odd and the user answered false
         // console.log("Jawaban benar, ini bukan angka genap");
-        wrapperNotif.current.classList.remove("evenvowel__wrapper_false");
+
         wrapperNotif.current.classList.add("evenvowel__wrapper_true");
+        setTimeout(() => {
+          wrapperNotif.current.classList.remove("evenvowel__wrapper_true");
+        }, 700);
       }
     } else {
       if (
@@ -99,22 +110,30 @@ const EvenVowel = () => {
       ) {
         if (userAnswer === true) {
           // console.log("Benar ini huruf vokal");
-          wrapperNotif.current.classList.remove("evenvowel__wrapper_false");
           wrapperNotif.current.classList.add("evenvowel__wrapper_true");
+          setTimeout(() => {
+            wrapperNotif.current.classList.remove("evenvowel__wrapper_true");
+          }, 700);
         } else {
           // console.log("Salah ini harusnya huruf vokal");
-          wrapperNotif.current.classList.remove("evenvowel__wrapper_true");
           wrapperNotif.current.classList.add("evenvowel__wrapper_false");
+          setTimeout(() => {
+            wrapperNotif.current.classList.remove("evenvowel__wrapper_false");
+          }, 700);
         }
       } else {
         if (userAnswer === true) {
           // console.log("Salah ini bukan huruf vokal");
-          wrapperNotif.current.classList.remove("evenvowel__wrapper_true");
           wrapperNotif.current.classList.add("evenvowel__wrapper_false");
+          setTimeout(() => {
+            wrapperNotif.current.classList.remove("evenvowel__wrapper_false");
+          }, 700);
         } else {
           // console.log("Benar ini bukan huruf vokal");
-          wrapperNotif.current.classList.remove("evenvowel__wrapper_false");
           wrapperNotif.current.classList.add("evenvowel__wrapper_true");
+          setTimeout(() => {
+            wrapperNotif.current.classList.remove("evenvowel__wrapper_true");
+          }, 700);
         }
       }
     }
