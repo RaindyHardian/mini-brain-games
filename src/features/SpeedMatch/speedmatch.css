@@ -1,0 +1,44 @@
+.speedmatch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.speedmatch__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.speedmatch__hint{
+  margin-bottom: 5px;
+}
+
+.speedmatch__question {
+  padding: 10px;
+  background-color: #2d3748;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.speedmatch__button {
+  width: 82.25px;
+  height: 50px;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+}
+
+.speedmatch__button:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.speedmatch__button_left {
+  margin-right: 5px;
+}
