@@ -98,6 +98,7 @@ const SpeedMatch = () => {
             src={question.current.picture}
             alt={question.current.type}
             ref={refPicture}
+            className="speedmatch__picture_size"
           />
         </div>
         <div className="speedmatch__button_wrap">

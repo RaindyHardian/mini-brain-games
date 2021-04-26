@@ -32,6 +32,26 @@
   text-decoration: underline;
   font-size: 1.8rem;
 }
+
 .home__link:hover {
   color: #6fd2df;
+}
+
+@media screen and (max-width: 420px) {
+  .home {
+    margin: 0 50px;
+  }
+
+  .home__title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .home__link_wrapper {
+    margin-bottom: 10px;
+  }
+
+  .home__link {
+    font-size: 1.5rem;
+  }
 }

@@ -11,3 +11,9 @@
 .page__nav_back:hover {
   color: #6fd2df;
 }
+
+@media screen and (max-width: 420px) {
+  .page__nav {
+    margin-left: 50px;
+  }
+}
