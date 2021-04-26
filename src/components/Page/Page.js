@@ -1,6 +1,6 @@
 import React from "react";
 
-const Page = ({ children }) => {
+const Page = ({ children, pageType }) => {
   return (
     <div>
       <main>{children}</main>
