@@ -94,6 +94,36 @@
   cursor: pointer;
 }
 
+@media (min-width: 768px) and (min-height: 1024px) {
+  .speedmatch__question {
+    width: 400px;
+    height: 400px;
+  }
+
+  .speedmatch__picture_size{
+    width: 320px;
+  }
+
+  .speedmatch__button_start {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .speedmatch__question {
+    width: 400px;
+    height: 400px;
+  }
+
+  .speedmatch__picture_size{
+    width: 320px;
+  }
+
+  .speedmatch__button_start {
+    width: 400px;
+  }
+}
+
 @keyframes trueAnim {
   from {
     border: 5px solid rgba(27, 187, 110, 0);

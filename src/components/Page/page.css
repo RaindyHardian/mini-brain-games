@@ -1,6 +1,6 @@
 .page__nav {
   margin-top: 30px;
-  margin-left: 100px;
+  margin-left: 50px;
 }
 
 .page__nav_back {
@@ -12,8 +12,8 @@
   color: #6fd2df;
 }
 
-@media screen and (max-width: 420px) {
+@media (min-width: 768px) {
   .page__nav {
-    margin-left: 50px;
+    margin-left: 100px;
   }
 }

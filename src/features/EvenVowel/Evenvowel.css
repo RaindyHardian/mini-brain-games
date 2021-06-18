@@ -77,6 +77,35 @@
   margin-right: 5px;
 }
 
+@media (min-width: 768px) and (min-height: 1024px) {
+  .evenvowel__item {
+    width: 350px;
+    height: 300px;
+  }
+
+  .evenvowel__button {
+    width: 172.5px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .evenvowel__item {
+    width: 250px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .evenvowel__item {
+    width: 350px;
+    height: 300px;
+  }
+
+  .evenvowel__button {
+    width: 172.5px;
+  }
+}
+
 @keyframes trueAnim {
   from {
     border: 3px solid rgba(27, 187, 110, 0);

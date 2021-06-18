@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 
 .home {
-  margin: 0 100px;
+  margin: 0 50px;
 }
 
 .home__title {
   font-family: "Roboto", sans-serif;
-  font-size: 2.9rem;
+  font-size: 2.5rem;
   margin-top: 50px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: rgb(240, 240, 240);
 }
 
@@ -23,35 +23,35 @@
 }
 
 .home__link_wrapper {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .home__link {
   text-decoration: none;
   color: rgb(240, 240, 240);
   text-decoration: underline;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .home__link:hover {
   color: #6fd2df;
 }
 
-@media screen and (max-width: 420px) {
+@media (min-width: 768px) {
   .home {
-    margin: 0 50px;
+    margin: 0 100px;
   }
 
   .home__title {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2.9rem;
+    margin-bottom: 5px;
   }
 
   .home__link_wrapper {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   .home__link {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
