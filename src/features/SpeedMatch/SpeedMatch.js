@@ -1,22 +1,27 @@
-import React, { useState, useRef } from "react";
-import "./speedmatch.css";
+import React, { useState, useRef } from 'react';
+import Circle from '../../components/SpeedMatch/Circle';
+import Pentagon from '../../components/SpeedMatch/Pentagon';
+import Picture from '../../components/SpeedMatch/Picture';
+import Square from '../../components/SpeedMatch/Square';
+import Triangle from '../../components/SpeedMatch/Triangle';
+import './speedmatch.css';
 
 const shape = [
   {
-    type: "square",
-    picture: "/square-yellow.svg",
+    type: 'square',
+    component: <Square />,
   },
   {
-    type: "triangle",
-    picture: "/triangle-green.svg",
+    type: 'triangle',
+    component: <Triangle />,
   },
   {
-    type: "circle",
-    picture: "/ellipse-red.svg",
+    type: 'circle',
+    component: <Circle />,
   },
   {
-    type: "pentagon",
-    picture: "/pentagon-purple.svg",
+    type: 'pentagon',
+    component: <Pentagon />,
   },
 ];
 
@@ -33,31 +38,31 @@ const SpeedMatch = () => {
     if (question.current.type === question.previous.type) {
       if (userAnswer) {
         // user correct
-        refWrapperNotif.current.classList.add("speedmatch___wrapper_true");
+        refWrapperNotif.current.classList.add('speedmatch___wrapper_true');
         setTimeout(() => {
-          refWrapperNotif.current.classList.remove("speedmatch___wrapper_true");
+          refWrapperNotif.current.classList.remove('speedmatch___wrapper_true');
         }, 700);
       } else {
-        refWrapperNotif.current.classList.add("speedmatch___wrapper_false");
+        refWrapperNotif.current.classList.add('speedmatch___wrapper_false');
         setTimeout(() => {
           refWrapperNotif.current.classList.remove(
-            "speedmatch___wrapper_false"
+            'speedmatch___wrapper_false'
           );
         }, 700);
       }
     } else {
       if (userAnswer) {
         // user false
-        refWrapperNotif.current.classList.add("speedmatch___wrapper_false");
+        refWrapperNotif.current.classList.add('speedmatch___wrapper_false');
         setTimeout(() => {
           refWrapperNotif.current.classList.remove(
-            "speedmatch___wrapper_false"
+            'speedmatch___wrapper_false'
           );
         }, 700);
       } else {
-        refWrapperNotif.current.classList.add("speedmatch___wrapper_true");
+        refWrapperNotif.current.classList.add('speedmatch___wrapper_true');
         setTimeout(() => {
-          refWrapperNotif.current.classList.remove("speedmatch___wrapper_true");
+          refWrapperNotif.current.classList.remove('speedmatch___wrapper_true');
         }, 700);
       }
     }
@@ -69,7 +74,7 @@ const SpeedMatch = () => {
       setIsFirstPlay(false);
     }
 
-    refPicture.current.classList.add("speedmatch__picture");
+    refPicture.current.classList.add('speedmatch__picture');
 
     const newQuestion = shape[Math.floor(Math.random() * 4)];
     const prevQuestion = question.current;
@@ -81,7 +86,7 @@ const SpeedMatch = () => {
       });
     }, 300);
     setTimeout(() => {
-      refPicture.current.classList.remove("speedmatch__picture");
+      refPicture.current.classList.remove('speedmatch__picture');
     }, 700);
   };
 
@@ -90,16 +95,11 @@ const SpeedMatch = () => {
       <div className="speedmatch__wrapper" ref={refWrapperNotif}>
         <div className="speedmatch__hint">
           {!isFirstPlay
-            ? "Is it the same figure as before?"
-            : "Remember this first shape"}
+            ? 'Is it the same figure as before?'
+            : 'Remember this first shape'}
         </div>
         <div className="speedmatch__question">
-          <img
-            src={question.current.picture}
-            alt={question.current.type}
-            ref={refPicture}
-            className="speedmatch__picture_size"
-          />
+          <Picture children={question.current.component} ref={refPicture} />
         </div>
         <div className="speedmatch__button_wrap">
           {!isFirstPlay ? (
